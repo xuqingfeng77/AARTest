@@ -18,14 +18,20 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" />
     <Button
+        android:id="@+id/btn1"
         android:layout_below="@id/txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="跳转拍照"
         android:onClick="BtnClick"/>
-    <ImageView
+
+    <Button
+
+        android:layout_below="@id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/aar_library_charge_keyboard_c"/>
+        android:text="assets test"
+        android:onClick="BtnAssetsClick"/>
+
 
 </RelativeLayout>

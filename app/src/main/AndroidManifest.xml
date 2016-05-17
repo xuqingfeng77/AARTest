@@ -21,6 +21,7 @@
         </activity>
         <activity android:name="com.cropper.ui.ActivityCapture"
             android:screenOrientation="landscape"/>
+        <activity android:name="com.cropper.ui.AssetsAct"/>
     </application>
 
 </manifest>

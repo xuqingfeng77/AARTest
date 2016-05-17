@@ -44,6 +44,7 @@
 -keep public class com.android.vending.licensing.ILicensingService
 
 -keep public class com.cropper.BitmapUtil { *;}
+-keep public class com.cropper.ui.AssetsAct { *;}
 
 -keepclasseswithmembers  class * {
     native <methods>;
@@ -57,7 +58,14 @@
     public <init>(android.content.Context, android.util.AttributeSet, int);
 }
 
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
 
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
 -assumenosideeffects class android.util.Log {
     public static *** d(...);
     public static *** v(...);

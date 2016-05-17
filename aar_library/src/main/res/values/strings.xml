@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">camercropper</string>
+    <string name="title_activity_test">TestAct</string>
 </resources>

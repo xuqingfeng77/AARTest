@@ -64,7 +64,7 @@ public class ActivityCapture extends Activity implements
         super.onCreate(savedInstanceState);
 //        path = FileUtils.getFilePath(System.currentTimeMillis() + ".png");
 		path = getIntent().getStringExtra(kPhotoPath);
-        setContentView(R.layout.activity_capture);
+        setContentView(R.layout.aar_library_activity_capture);
         getViews();
         initViews();
         setListeners();

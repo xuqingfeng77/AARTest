@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.cropper.ui.ActivityCapture;
+import com.cropper.ui.AssetsAct;
 
 import java.io.File;
 import java.util.Date;
@@ -68,6 +69,9 @@ private Context mContext;
     public void BtnClick(View v){
         setSelfCamera();
     }
+    public void BtnAssetsClick(View v){
+        intentAssets();
+    }
     /**
      * 启动自定义相机
      */
@@ -80,5 +84,9 @@ private Context mContext;
         Intent intent1 = new Intent(mContext, ActivityCapture.class);
         intent1.putExtra("path",file.getPath());
         startActivityForResult(intent1, 111);
+    }
+    private void intentAssets(){
+        Intent intent =new Intent (mContext, AssetsAct.class);
+        startActivity(intent);
     }
 }
