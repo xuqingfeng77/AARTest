@@ -46,6 +46,7 @@
 -keep public class com.cropper.BitmapUtil { *;}
 -keep public class com.cropper.ui.AssetsAct { *;}
 -keep public class com.baidu.location.**{*;}
+-keep public class com.jni.samples.HelloJniTest{*;}
 
 -keep class *.R -keepclasseswithmembers class **.R$* { public static <fields>;}
 

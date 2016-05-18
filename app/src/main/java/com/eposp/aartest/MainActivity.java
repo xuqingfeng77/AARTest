@@ -10,9 +10,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.cropper.ui.ActivityCapture;
 import com.cropper.ui.AssetsAct;
+import com.jni.samples.HelloJniTest;
 
 import java.io.File;
 import java.util.Date;
@@ -72,6 +74,9 @@ private Context mContext;
     public void BtnAssetsClick(View v){
         intentAssets();
     }
+    public void BtnJniClick(View v){
+        Toast.makeText(mContext, HelloJniTest.getPassFromJNI(),Toast.LENGTH_LONG).show();
+    }
     /**
      * 启动自定义相机
      */
@@ -89,4 +94,5 @@ private Context mContext;
         Intent intent =new Intent (mContext, AssetsAct.class);
         startActivity(intent);
     }
+
 }
