@@ -11,7 +11,7 @@ aar文件的生成和使用以及注意事项<br>
 有人是用maven或是Jcenter配置下载的jar，可以先下载下来在放到libs中，再打包，这样就可以避免maven配置的一些jar没法加载到aar中<br>
 
 -------注意事项----------<br>
-assets文件可以直接放入，不需要任何处理<br>
+assets文件可以直接放入，不需要任何处理，module里可以调用assets里的文件，其他的模块是没法调用的<br>
 so文件 在java同级新建jniLibs的文件夹，这样打包的aar文件，so文件才会在里面<br>
 module里放第三方jar文件，为了不混淆第三方jar，在混淆的时候记得处理，否则第三方的jar文件也会被混淆<br>
 
@@ -40,7 +40,7 @@ repositories {<br>
 #存在问题
 1.混淆的使用调用出现空指针异常，还未找到解决办法<br>
 #解决办法
-1.在module混淆文件中加入-keep class *.R -keepclasseswithmembers class **.R$* { public static <fields>;}<br>
+1.在module混淆文件中加入-keep class *.R -keepclasseswithmembers class **.R$* { public static <fields>;}不要混淆module的R文件<br>
 
 
 
