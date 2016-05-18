@@ -36,6 +36,7 @@ repositories {<br>
 
 }<br>
 3.然后重新build项目就ok，如果ok了则可以在External Libraries中可以看到<br>
+4.把module中有的activity都要配置到主项目中的Androidmanifest.xml文件中<br>
 
 #存在问题
 1.混淆的使用调用出现空指针异常，还未找到解决办法<br>
