@@ -45,6 +45,9 @@
 
 -keep public class com.cropper.BitmapUtil { *;}
 -keep public class com.cropper.ui.AssetsAct { *;}
+-keep public class com.baidu.location.**{*;}
+
+-keep class *.R -keepclasseswithmembers class **.R$* { public static <fields>;}
 
 -keepclasseswithmembers  class * {
     native <methods>;

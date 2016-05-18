@@ -10,6 +10,10 @@ aar文件的生成和使用以及注意事项<br>
 这个就是我要的文件，里面包括了class文件和资源文件<br>
 有人是用maven或是Jcenter配置下载的jar，可以先下载下来在放到libs中，再打包，这样就可以避免maven配置的一些jar没法加载到aar中<br>
 
+-------注意事项----------<br>
+assets文件可以直接放入，不需要任何处理<br>
+so文件 在java同级新建jniLibs的文件夹，这样打包的aar文件，so文件才会在里面<br>
+module里放第三方jar文件，为了不混淆第三方jar，在混淆的时候记得处理，否则第三方的jar文件也会被混淆<br>
 
 # 另做说明
 这个项目只是生产aar文件，我在另一个项目MiSee中进行测试，这里把在https://github.com/xuqingfeng77/MiSee中的配置也写下<br>
@@ -35,6 +39,8 @@ repositories {<br>
 
 #存在问题
 1.混淆的使用调用出现空指针异常，还未找到解决办法<br>
+#解决办法
+1.在module混淆文件中加入-keep class *.R -keepclasseswithmembers class **.R$* { public static <fields>;}<br>
 
 
 
